@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucide.WPF", "WPF\Lucide.WPF.csproj", "{B39D0921-5C27-4F3D-968E-ECA4118DF575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucide.Desktop", "WPF\Lucide.Desktop.csproj", "{B39D0921-5C27-4F3D-968E-ECA4118DF575}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wpf", "demos\Wpf\Wpf.csproj", "{DF9E5137-0950-400A-BE37-9EFD8CBC6552}"
 EndProject
