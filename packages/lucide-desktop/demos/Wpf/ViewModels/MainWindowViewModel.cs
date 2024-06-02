@@ -2,7 +2,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Lucide.WPF;
 using Lucide.WPF.Enums;
-using System.Drawing;
 using System.Windows.Media;
 using Wpf.Views;
 
@@ -102,7 +101,7 @@ internal class MainWindowViewModel : ObservableObject
 
   private async Task HandleLoaded()
   {
-    ColorPickerIcon = await IconManager.CreateImageSource(IconName.palette);
+    ColorPickerIcon = await IconManager.CreateImageSource(IconName.palette, Colors.Black);
   }
   private async Task HandleCategorySelect()
   {
