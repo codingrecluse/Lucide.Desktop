@@ -1,0 +1,6 @@
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.csproj.AssemblyReference.cache
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.AssemblyInfoInputs.cache
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.AssemblyInfo.cs
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.csproj.CoreCompileInputs.cache
+C:\Users\phexyaa\source\repos\Lucide.Desktop\packages\lucide-desktop\WPF\obj\Debug\net8.0-windows\Lucide.WPF.sourcelink.json

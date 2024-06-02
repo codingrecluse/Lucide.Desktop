@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "sjT2N6dA8fo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\phexyaa\\source\\repos\\Lucide.Desktop\\packages\\lucide-desktop\\WPF\\Lucide.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phexyaa\\.nuget\\packages\\excss\\4.2.3\\excss.4.2.3.nupkg.sha512",
+    "C:\\Users\\phexyaa\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\phexyaa\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\phexyaa\\.nuget\\packages\\svg\\3.4.7\\svg.3.4.7.nupkg.sha512",
+    "C:\\Users\\phexyaa\\.nuget\\packages\\system.drawing.common\\5.0.3\\system.drawing.common.5.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
