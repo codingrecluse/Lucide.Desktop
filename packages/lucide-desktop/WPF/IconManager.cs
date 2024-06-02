@@ -17,47 +17,141 @@ public class IconManager
     private static string _basePath = AppDomain.CurrentDomain.BaseDirectory;
 
 
-    /// <summary>
-    /// Creates and returns an ImageSource file based on provided parameters.
-    /// </summary>
-    /// <param name="icon">Name of the icon.</param>
-    /// <param name="color">Color (default is black)</param>
-    /// <param name="height">Height of image (default is 128px)</param>
-    /// <param name="width">Width of image (default is 128px)</param>
-    /// <returns></returns>
-    public static async Task<ImageSource?> CreateImageSource(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
+  /// <summary>
+  /// Creates and returns an ImageSource file based on provided parameters.
+  /// </summary>
+  /// <param name="icon">Name of the icon.</param>
+  /// <param name="color">Color (default is black)</param>
+  /// <param name="height">Height of image (default is 128px)</param>
+  /// <param name="width">Width of image (default is 128px)</param>
+  /// <returns></returns>
+  public static async Task<ImageSource?> CreateImageSource(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
+  {
+    var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
+    if (color == null)
+      color = Colors.Black;
+
+    if (File.Exists(filePath))
     {
-        var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
-        if (color == null)
-            color = Colors.Black;
+      var data = await File.ReadAllTextAsync(filePath);
+      var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
+      data = data.Replace("currentColor", colorString);
+      var options = new SvgOptions();
+      var document = SvgDocument.FromSvg<SvgDocument>(data);
+      document.Height = height;
+      document.Width = width;
+      document.FillOpacity = 0;
 
-        if (File.Exists(filePath))
-        {
-            var data = await File.ReadAllTextAsync(filePath);
-            var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
-            data = data.Replace("currentColor", colorString);
-            var options = new SvgOptions();
-            var document = SvgDocument.FromSvg<SvgDocument>(data);
-            document.Height = height;
-            document.Width = width;
-            document.FillOpacity = 0;
-
-            return GenerateSource(document.Draw());
-        }
-        else
-            return null;
-
+      return GenerateSource(document.Draw());
     }
+    else
+      return null;
 
-    /// <summary>
-    /// Creates and returns a Bitmap file based on provided parameters.
-    /// </summary>
-    /// <param name="icon">Name of the icon.</param>
-    /// <param name="color">Color (default is black)</param>
-    /// <param name="height">Height of image (default is 128px)</param>
-    /// <param name="width">Width of image (default is 128px)</param>
-    /// <returns></returns>
-    public static async Task<Bitmap?> CreateBitmap(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
+  }
+  /// <summary>
+  /// Creates and returns an ImageSource file based on provided parameters.
+  /// </summary>
+  /// <param name="icon">Name of the icon.</param>
+  /// <param name="color">Color (default is black)</param>
+  /// <param name="height">Height of image (default is 128px)</param>
+  /// <param name="width">Width of image (default is 128px)</param>
+  /// <returns></returns>
+  public static async Task<ImageSource?> CreateImageSource(IconName icon, System.Drawing.Color? color = null, int height = 128, int width = 128)
+  {
+    var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
+    if (color == null)
+      color = System.Drawing.Color.Black;
+
+    if (File.Exists(filePath))
+    {
+      var data = await File.ReadAllTextAsync(filePath);
+      var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
+      data = data.Replace("currentColor", colorString);
+      var options = new SvgOptions();
+      var document = SvgDocument.FromSvg<SvgDocument>(data);
+      document.Height = height;
+      document.Width = width;
+      document.FillOpacity = 0;
+
+      return GenerateSource(document.Draw());
+    }
+    else
+      return null;
+
+  }
+
+  /// <summary>
+  /// Creates and returns a Bitmap file based on provided parameters.
+  /// </summary>
+  /// <param name="icon">Name of the icon.</param>
+  /// <param name="color">Color (default is black)</param>
+  /// <param name="height">Height of image (default is 128px)</param>
+  /// <param name="width">Width of image (default is 128px)</param>
+  /// <returns></returns>
+  public static async Task<Bitmap?> CreateBitmap(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
+  {
+    var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
+    if (color == null)
+      color = Colors.Black;
+
+    if (File.Exists(filePath))
+    {
+      var data = await File.ReadAllTextAsync(filePath);
+      var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
+      data = data.Replace("currentColor", colorString);
+      var options = new SvgOptions();
+      var document = SvgDocument.FromSvg<SvgDocument>(data);
+      document.Height = height;
+      document.Width = width;
+      document.FillOpacity = 0;
+
+      return document.Draw();
+    }
+    else
+      return null;
+
+  }
+
+
+  /// <summary>
+  /// Creates and returns a Bitmap file based on provided parameters.
+  /// </summary>
+  /// <param name="icon">Name of the icon.</param>
+  /// <param name="color">Color (default is black)</param>
+  /// <param name="height">Height of image (default is 128px)</param>
+  /// <param name="width">Width of image (default is 128px)</param>
+  /// <returns></returns>
+  public static async Task<Bitmap?> CreateBitmap(IconName icon, System.Drawing.Color? color = null, int height = 128, int width = 128)
+  {
+    var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
+    if (color == null)
+      color = System.Drawing.Color.Black;
+
+    if (File.Exists(filePath))
+    {
+      var data = await File.ReadAllTextAsync(filePath);
+      var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
+      data = data.Replace("currentColor", colorString);
+      var options = new SvgOptions();
+      var document = SvgDocument.FromSvg<SvgDocument>(data);
+      document.Height = height;
+      document.Width = width;
+      document.FillOpacity = 0;
+
+      return document.Draw();
+    }
+    else
+      return null;
+
+  }/// <summary>
+   /// Creates and returns a basic System.Drawing.Image file based on provided parameters.
+   /// </summary>
+   /// <param name="icon">Name of the icon.</param>
+   /// <param name="color">Color (default is black)</param>
+   /// <param name="height">Height of image (default is 128px)</param>
+   /// <param name="width">Width of image (default is 128px)</param>
+   /// <returns></returns>
+  public static async Task<Image?> CreateImage(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
     {
         var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
         if (color == null)
@@ -78,41 +172,39 @@ public class IconManager
         }
         else
             return null;
-
     }
 
-    /// <summary>
-    /// Creates and returns a basic System.Drawing.Image file based on provided parameters.
-    /// </summary>
-    /// <param name="icon">Name of the icon.</param>
-    /// <param name="color">Color (default is black)</param>
-    /// <param name="height">Height of image (default is 128px)</param>
-    /// <param name="width">Width of image (default is 128px)</param>
-    /// <returns></returns>
-    public static async Task<Image?> CreateImage(IconName icon, System.Windows.Media.Color? color = null, int height = 128, int width = 128)
+  /// <summary>
+  /// Creates and returns a basic System.Drawing.Image file based on provided parameters.
+  /// </summary>
+  /// <param name="icon">Name of the icon.</param>
+  /// <param name="color">Color (default is black)</param>
+  /// <param name="height">Height of image (default is 128px)</param>
+  /// <param name="width">Width of image (default is 128px)</param>
+  /// <returns></returns>
+  public static async Task<Image?> CreateImage(IconName icon, System.Drawing.Color? color = null, int height = 128, int width = 128)
+  {
+    var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
+    if (color == null)
+      color = System.Drawing.Color.Black;
+
+    if (File.Exists(filePath))
     {
-        var filePath = _basePath + "icons\\" + Enum.GetName(icon) + ".svg";
-        if (color == null)
-            color = Colors.Black;
+      var data = await File.ReadAllTextAsync(filePath);
+      var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
+      data = data.Replace("currentColor", colorString);
+      var options = new SvgOptions();
+      var document = SvgDocument.FromSvg<SvgDocument>(data);
+      document.Height = height;
+      document.Width = width;
+      document.FillOpacity = 0;
 
-        if (File.Exists(filePath))
-        {
-            var data = await File.ReadAllTextAsync(filePath);
-            var colorString = $"rgba({color.Value.R}, {color.Value.G}, {color.Value.B}, {color.Value.A})";
-            data = data.Replace("currentColor", colorString);
-            var options = new SvgOptions();
-            var document = SvgDocument.FromSvg<SvgDocument>(data);
-            document.Height = height;
-            document.Width = width;
-            document.FillOpacity = 0;
-
-            return document.Draw();
-        }
-        else
-            return null;
+      return document.Draw();
     }
-
-    private static ImageSource? GenerateSource(Bitmap bitmap)
+    else
+      return null;
+  }
+  private static ImageSource? GenerateSource(Bitmap bitmap)
     {
         var bitmapData =
             bitmap.LockBits(
