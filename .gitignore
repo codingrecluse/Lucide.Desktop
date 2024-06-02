@@ -47,3 +47,7 @@ docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vercel
 docs/.nitro
+/packages/lucide-desktop/demos/Wpf/obj/Debug/net8.0-windows
+/packages/lucide-desktop/WPF/obj/Debug/net8.0-windows
+/packages/lucide-desktop/demos/Wpf/obj
+/packages/lucide-desktop/WPF/obj
