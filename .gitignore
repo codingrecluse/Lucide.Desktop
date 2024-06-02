@@ -1,4 +1,7 @@
 .DS_Store
+.vs
+.bin
+.obj
 .idea
 .next
 .obsidian
@@ -13,6 +16,11 @@ coverage
 stats
 *.log
 outlined
+pacakages/lucide-desktop/WPF/.bin
+pacakages/lucide-desktop/WPF/.obj
+pacakages/lucide-desktop/demos/WPF/.bin
+pacakages/lucide-desktop/demos/WPF/.obj
+pacakages/**/.vs
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
 packages/**/src/icons/*.tsx

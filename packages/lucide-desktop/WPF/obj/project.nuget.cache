@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjT2N6dA8fo=",
+  "dgSpecHash": "Mi+q+5SWlWs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\phexyaa\\source\\repos\\Lucide.Desktop\\packages\\lucide-desktop\\WPF\\Lucide.WPF.csproj",
+  "projectFilePath": "C:\\Users\\phexyaa\\Source\\Repos\\Lucide.Desktop\\packages\\lucide-desktop\\WPF\\Lucide.WPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phexyaa\\.nuget\\packages\\excss\\4.2.3\\excss.4.2.3.nupkg.sha512",
     "C:\\Users\\phexyaa\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

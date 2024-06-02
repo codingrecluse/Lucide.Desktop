@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lucide.WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d6c2fe4ba48766ff8f112733e268cc69f71086")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26931ef028ae863842b26f8db08f749738768241")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lucide.WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lucide.WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
