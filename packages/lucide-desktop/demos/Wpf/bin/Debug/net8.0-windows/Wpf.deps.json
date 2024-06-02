@@ -9,7 +9,7 @@
       "Wpf/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
-          "Lucide.WPF": "1.0.0",
+          "Lucide.Desktop": "1.0.0",
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.77"
         },
         "runtime": {
@@ -63,12 +63,12 @@
           "Microsoft.Win32.SystemEvents": "5.0.0"
         }
       },
-      "Lucide.WPF/1.0.0": {
+      "Lucide.Desktop/1.0.0": {
         "dependencies": {
           "Svg": "3.4.7"
         },
         "runtime": {
-          "Lucide.WPF.dll": {}
+          "Lucide.Desktop.dll": {}
         }
       }
     }
@@ -128,7 +128,7 @@
       "path": "system.drawing.common/5.0.3",
       "hashPath": "system.drawing.common.5.0.3.nupkg.sha512"
     },
-    "Lucide.WPF/1.0.0": {
+    "Lucide.Desktop/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

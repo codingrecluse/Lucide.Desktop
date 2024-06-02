@@ -51,3 +51,6 @@ docs/.nitro
 /packages/lucide-desktop/WPF/obj/Debug/net8.0-windows
 /packages/lucide-desktop/demos/Wpf/obj
 /packages/lucide-desktop/WPF/obj
+/packages/lucide-desktop/Forms/bin/Debug/net8.0-windows
+/packages/lucide-desktop/Forms/obj
+/packages/lucide-desktop/WPF/bin/Debug/net8.0-windows
